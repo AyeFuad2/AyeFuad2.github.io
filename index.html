@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fuad Aye | Technical Support Engineer</title>
+<meta name="description" content="Fuad Aye is a Technical Support Engineer based in Dallas, TX, specializing in cloud infrastructure, SaaS support, and AWS solutions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #f9f8f5;
+    --surface: #ffffff;
+    --text: #1a1a1a;
+    --text-muted: #6b6b6b;
+    --text-light: #9a9a9a;
+    --accent: #1a1a1a;
+    --accent-warm: #c97941;
+    --border: rgba(0,0,0,0.08);
+    --border-strong: rgba(0,0,0,0.14);
+    --pill-bg: #f0ede8;
+    --pill-text: #3a3530;
+    --nav-bg: rgba(249,248,245,0.88);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--text); }
+
+  .nav-cta {
+    background: var(--text) !important;
+    color: var(--bg) !important;
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 0.82rem !important;
+    transition: opacity 0.2s !important;
+  }
+  .nav-cta:hover { opacity: 0.8; color: var(--bg) !important; }
+
+  /* SECTIONS */
+  section { padding: 5rem 2rem; }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  /* HERO */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 56px;
+  }
+
+  .hero-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-warm);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 1px;
+    background: var(--accent-warm);
+  }
+
+  .hero-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(3.2rem, 8vw, 6.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-name em {
+    font-style: italic;
+    color: var(--accent-warm);
+  }
+
+  .hero-tagline {
+    font-size: 1.15rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    max-width: 520px;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--text);
+    color: var(--bg);
+    padding: 12px 28px;
+    border-radius: 100px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity 0.2s;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-primary:hover { opacity: 0.75; }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--text);
+    padding: 12px 28px;
+    border-radius: 100px;
+    font-size: 0.88rem;
+    font-weight: 400;
+    text-decoration: none;
+    border: 1px solid var(--border-strong);
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-secondary:hover { background: var(--surface); border-color: rgba(0,0,0,0.2); }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-light);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    animation: bounce 2s ease-in-out infinite;
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--text-light), transparent);
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(6px); }
+  }
+
+  /* DIVIDER */
+  .section-divider {
+    width: 100%;
+    height: 1px;
+    background: var(--border);
+    margin: 0 2rem;
+    max-width: calc(860px - 0px);
+    display: block;
+  }
+
+  /* SECTION HEADER */
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* SKILLS */
+  #skills { background: var(--surface); }
+
+  .skills-intro {
+    font-size: 1.4rem;
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 2.5rem;
+    line-height: 1.4;
+    max-width: 600px;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .skill-cat {
+    background: var(--surface);
+    padding: 1.4rem 1.5rem;
+  }
+
+  .skill-cat-title {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-warm);
+    margin-bottom: 0.9rem;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .skill-tag {
+    background: var(--pill-bg);
+    color: var(--pill-text);
+    font-size: 0.78rem;
+    padding: 4px 10px;
+    border-radius: 100px;
+    font-weight: 400;
+  }
+
+  /* EXPERIENCE */
+  .exp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .exp-item {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+  .exp-item:first-child { border-top: 1px solid var(--border); }
+
+  .exp-meta {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    line-height: 1.5;
+  }
+
+  .exp-period {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+  }
+
+  .exp-company {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  .exp-title {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 0.6rem;
+  }
+
+  .exp-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .exp-desc li::before {
+    content: '→ ';
+    color: var(--accent-warm);
+    font-weight: 500;
+  }
+
+  .exp-highlight {
+    display: inline-block;
+    background: #fdf3e7;
+    color: #8a4f1a;
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 2px 9px;
+    border-radius: 100px;
+    margin-top: 4px;
+  }
+
+  /* PROJECTS */
+  #projects { background: var(--surface); }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.75rem;
+    background: var(--bg);
+    transition: border-color 0.2s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .project-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--accent-warm);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .project-card:hover {
+    border-color: rgba(0,0,0,0.18);
+    transform: translateY(-2px);
+  }
+  .project-card:hover::before { opacity: 1; }
+
+  .project-number {
+    font-size: 0.72rem;
+    color: var(--text-light);
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .project-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.2rem;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .project-desc {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin-bottom: 1.2rem;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  /* ABOUT */
+  #about {
+    background: var(--bg);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .about-text h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2rem;
+    line-height: 1.25;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .about-facts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .about-fact-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .fact-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 0.4rem;
+  }
+
+  .fact-value {
+    font-size: 0.95rem;
+    color: var(--text);
+    font-weight: 400;
+  }
+
+  .cert-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fdf3e7;
+    border: 1px solid rgba(201,121,65,0.2);
+    color: #8a4f1a;
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-top: 0.5rem;
+  }
+
+  /* MINI GAME */
+  #game {
+    background: var(--surface);
+  }
+
+  .game-intro {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    max-width: 500px;
+  }
+
+  .game-wrapper {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .game-hud {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+  }
+
+  .hud-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .hud-label {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-light);
+  }
+
+  .hud-value {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+  }
+
+  #game-btn {
+    background: var(--text);
+    color: var(--bg);
+    border: none;
+    padding: 8px 22px;
+    border-radius: 100px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    font-family: 'DM Sans', sans-serif;
+  }
+  #game-btn:hover { opacity: 0.75; }
+
+  #game-arena {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+    cursor: crosshair;
+    user-select: none;
+  }
+
+  .game-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--text-light);
+    font-size: 0.88rem;
+  }
+
+  .game-placeholder-icon {
+    font-size: 2.5rem;
+    opacity: 0.3;
+  }
+
+  .bug {
+    position: absolute;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: transform 0.1s;
+    user-select: none;
+    animation: bugwiggle 0.4s ease-in-out infinite alternate;
+    line-height: 1;
+  }
+
+  .bug:hover { transform: scale(1.15); }
+  .bug.squashed { animation: squash 0.2s forwards; }
+
+  @keyframes bugwiggle {
+    from { transform: rotate(-8deg); }
+    to { transform: rotate(8deg); }
+  }
+
+  @keyframes squash {
+    0% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(0); opacity: 0; }
+  }
+
+  .game-over-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(249,248,245,0.94);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    display: none;
+  }
+
+  .game-over-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2rem;
+    color: var(--text);
+  }
+
+  .game-over-score {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  .game-tip {
+    padding: 0.75rem 1.5rem;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    font-size: 0.78rem;
+    color: var(--text-light);
+    text-align: center;
+  }
+
+  /* CONTACT */
+  #contact {
+    background: var(--text);
+    color: var(--bg);
+  }
+
+  #contact .section-label {
+    color: rgba(255,255,255,0.35);
+  }
+  #contact .section-label::after {
+    background: rgba(255,255,255,0.12);
+  }
+
+  .contact-heading {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #f9f8f5;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .contact-heading em {
+    color: var(--accent-warm);
+    font-style: italic;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2.5rem;
+  }
+
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(249,248,245,0.75);
+    text-decoration: none;
+    font-size: 0.88rem;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .contact-link:hover { color: #f9f8f5; border-color: rgba(255,255,255,0.6); }
+
+  .contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent-warm);
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 100px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .contact-btn:hover { opacity: 0.85; }
+
+  /* FOOTER */
+  footer {
+    background: #111;
+    color: rgba(255,255,255,0.35);
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.78rem;
+  }
+
+  /* FADE IN */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* MARQUEE */
+  .skills-marquee-wrap {
+    overflow: hidden;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
+    margin: 3rem -2rem 0;
+    background: var(--bg);
+  }
+
+  .skills-marquee {
+    display: flex;
+    gap: 2rem;
+    animation: marquee 22s linear infinite;
+    white-space: nowrap;
+    width: max-content;
+  }
+
+  .marquee-item {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .marquee-item::after {
+    content: '·';
+    color: var(--accent-warm);
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Fuad Aye</a>
+  <ul class="nav-links">
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#game">Play</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner fade-in">
+    <p class="hero-eyebrow">Dallas, TX · Open to relocate</p>
+    <h1 class="hero-name">Fuad<br><em>Aye.</em></h1>
+    <p class="hero-tagline">Technical Support Engineer — diagnosing the hard problems, building smarter solutions with AWS and cloud infrastructure.</p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-primary">View My Work →</a>
+      <a href="#contact" class="btn-secondary">Get In Touch</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    scroll
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <p class="section-label">Skills & Tools</p>
+    <p class="skills-intro fade-in">From cloud infrastructure to customer-facing support — the stack I work with day to day.</p>
+
+    <div class="skills-grid fade-in">
+      <div class="skill-cat">
+        <div class="skill-cat-title">Technical</div>
+        <div class="skill-tags">
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">Active Directory</span>
+          <span class="skill-tag">Microsoft Entra ID</span>
+          <span class="skill-tag">Software Testing</span>
+          <span class="skill-tag">API & JSON</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-title">Languages</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Bash</span>
+          <span class="skill-tag">Linux</span>
+          <span class="skill-tag">Terraform</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-title">Cloud & Infra</div>
+        <div class="skill-tags">
+          <span class="skill-tag">AWS Lambda</span>
+          <span class="skill-tag">Amplify</span>
+          <span class="skill-tag">Bedrock</span>
+          <span class="skill-tag">AppSync</span>
+          <span class="skill-tag">Cognito</span>
+          <span class="skill-tag">S3</span>
+          <span class="skill-tag">EC2</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-title">Tools & Soft</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Salesforce</span>
+          <span class="skill-tag">Jira</span>
+          <span class="skill-tag">Troubleshooting</span>
+          <span class="skill-tag">Customer Service</span>
+          <span class="skill-tag">Adaptability</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-marquee-wrap">
+      <div class="skills-marquee" id="marquee">
+        <span class="marquee-item">SQL</span>
+        <span class="marquee-item">AWS Lambda</span>
+        <span class="marquee-item">Python</span>
+        <span class="marquee-item">Terraform</span>
+        <span class="marquee-item">Salesforce</span>
+        <span class="marquee-item">Active Directory</span>
+        <span class="marquee-item">Amazon Bedrock</span>
+        <span class="marquee-item">Linux</span>
+        <span class="marquee-item">Bash</span>
+        <span class="marquee-item">Jira</span>
+        <span class="marquee-item">API & JSON</span>
+        <span class="marquee-item">EC2</span>
+        <span class="marquee-item">S3</span>
+        <span class="marquee-item">GraphQL</span>
+        <span class="marquee-item">CI/CD</span>
+        <span class="marquee-item">SQL</span>
+        <span class="marquee-item">AWS Lambda</span>
+        <span class="marquee-item">Python</span>
+        <span class="marquee-item">Terraform</span>
+        <span class="marquee-item">Salesforce</span>
+        <span class="marquee-item">Active Directory</span>
+        <span class="marquee-item">Amazon Bedrock</span>
+        <span class="marquee-item">Linux</span>
+        <span class="marquee-item">Bash</span>
+        <span class="marquee-item">Jira</span>
+        <span class="marquee-item">API & JSON</span>
+        <span class="marquee-item">EC2</span>
+        <span class="marquee-item">S3</span>
+        <span class="marquee-item">GraphQL</span>
+        <span class="marquee-item">CI/CD</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <p class="section-label">Experience</p>
+    <div class="exp-list">
+
+      <div class="exp-item fade-in">
+        <div class="exp-meta">
+          <div class="exp-period">Dec 2023 – Present</div>
+          <div class="exp-company">Trintech · Plano, TX</div>
+        </div>
+        <div>
+          <div class="exp-title">Technical Support Engineer</div>
+          <ul class="exp-desc">
+            <li>Supported production SaaS applications by diagnosing application, database, and infrastructure-level issues impacting availability and performance.</li>
+            <li>Reduced issue resolution time by 30% through SQL, log analysis, and environment replication.</li>
+            <li>Triaged and resolved customer-escalated issues across Trintech's product suite, collaborating with engineering to validate fixes for enterprise clients.</li>
+          </ul>
+          <span class="exp-highlight">↓ 30% resolution time</span>
+        </div>
+      </div>
+
+      <div class="exp-item fade-in">
+        <div class="exp-meta">
+          <div class="exp-period">Sep 2021 – Jan 2023</div>
+          <div class="exp-company">Amoud Foundation · Irving, TX</div>
+        </div>
+        <div>
+          <div class="exp-title">Help Desk Technician</div>
+          <ul class="exp-desc">
+            <li>Provided desk support and data analysis using Excel to track event data and support reporting needs.</li>
+            <li>Delivered on-site IT and network support for large-scale fundraising events, ensuring uninterrupted operations for events generating $100,000+ in donations.</li>
+          </ul>
+          <span class="exp-highlight">$100K+ events supported</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <p class="section-label">Projects</p>
+    <div class="projects-grid">
+
+      <div class="project-card fade-in">
+        <div class="project-number">01</div>
+        <div class="project-title">AI-Powered Study Assistant</div>
+        <p class="project-desc">Serverless generative AI web app delivering real-time AI responses, with CI/CD-enabled hosting and secure authentication at scale.</p>
+        <div class="project-tags">
+          <span class="skill-tag">AWS Amplify</span>
+          <span class="skill-tag">AppSync</span>
+          <span class="skill-tag">Lambda</span>
+          <span class="skill-tag">Bedrock</span>
+          <span class="skill-tag">Cognito</span>
+          <span class="skill-tag">React</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-number">02</div>
+        <div class="project-title">Customer Identity & Reward Backend</div>
+        <p class="project-desc">Relational backend membership system with a focus on scalability and availability — documented with full UML diagrams, SLAs, and ticketing workflows.</p>
+        <div class="project-tags">
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">UML</span>
+          <span class="skill-tag">System Architecture</span>
+          <span class="skill-tag">Security</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <p class="section-label">About</p>
+    <div class="about-grid">
+      <div class="about-text fade-in">
+        <h2>Engineer by trade, problem-solver by nature.</h2>
+        <p>I'm Fuad — a Technical Support Engineer based in Dallas, TX with a background in Information Systems from UT Arlington. I specialize in diagnosing complex SaaS, database, and cloud infrastructure issues and building solutions that actually stick.</p>
+        <p>Outside of work I'm passionate about community. I've volunteered with the Amoud Foundation since 2013, supporting food distribution, fundraising, and emergency relief programs.</p>
+        <p style="font-size:0.82rem; color: var(--text-light);">When I'm not debugging: Community Work &nbsp;·&nbsp; Cloud Architecture &nbsp;·&nbsp; Exploring AI Tools</p>
+      </div>
+      <div class="about-facts fade-in">
+        <div class="about-fact-card">
+          <div class="fact-label">Location</div>
+          <div class="fact-value">Dallas, TX · Open to Relocate</div>
+        </div>
+        <div class="about-fact-card">
+          <div class="fact-label">Education</div>
+          <div class="fact-value">B.S. Information Systems, UT Arlington (GPA 3.5)</div>
+        </div>
+        <div class="about-fact-card">
+          <div class="fact-label">Certification</div>
+          <div class="fact-value">
+            <div class="cert-badge">☁ AWS Certified Solutions Architect – Associate</div>
+          </div>
+        </div>
+        <div class="about-fact-card">
+          <div class="fact-label">Volunteer</div>
+          <div class="fact-value">Amoud Foundation · Since 2013</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MINI GAME -->
+<section id="game">
+  <div class="container">
+    <p class="section-label">Debug Mode</p>
+    <p class="game-intro">Every support engineer's superpower is speed. Squash the bugs before they escape — how fast are your reflexes?</p>
+    <div class="game-wrapper">
+      <div class="game-hud">
+        <div class="hud-stat">
+          <span class="hud-label">Score</span>
+          <span class="hud-value" id="score-display">0</span>
+        </div>
+        <div class="hud-stat">
+          <span class="hud-label">Lives</span>
+          <span class="hud-value" id="lives-display">❤️❤️❤️</span>
+        </div>
+        <button id="game-btn" onclick="startGame()">Deploy Bugs</button>
+        <div class="hud-stat">
+          <span class="hud-label">Time</span>
+          <span class="hud-value" id="timer-display">30</span>
+        </div>
+        <div class="hud-stat">
+          <span class="hud-label">Best</span>
+          <span class="hud-value" id="best-display">0</span>
+        </div>
+      </div>
+      <div id="game-arena">
+        <div class="game-placeholder" id="game-placeholder">
+          <div class="game-placeholder-icon">🐛</div>
+          <span>Hit "Deploy Bugs" to start</span>
+        </div>
+        <div class="game-over-overlay" id="game-over">
+          <div class="game-over-title" id="go-title">Time's Up!</div>
+          <div class="game-over-score" id="go-score">You squashed 0 bugs.</div>
+          <button id="game-restart" class="btn-primary" onclick="startGame()" style="margin-top:0.5rem">Try Again</button>
+        </div>
+      </div>
+      <div class="game-tip">Tip: Bugs speed up as time runs out. No mercy for slow debuggers.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <p class="section-label">Contact</p>
+    <h2 class="contact-heading">Let's build something<br><em>worth shipping.</em></h2>
+    <p style="color: rgba(249,248,245,0.55); font-size:0.95rem; max-width:480px; margin-bottom:2rem;">Open to new opportunities in cloud infrastructure, technical support engineering, and AWS-focused roles. Let's talk.</p>
+    <a href="mailto:ayefuad2@gmail.com" class="contact-btn">ayefuad2@gmail.com →</a>
+    <div class="contact-links">
+      <a href="https://linkedin.com/in/fuad-aye2/" target="_blank" class="contact-link">↗ LinkedIn</a>
+      <a href="tel:+12142239581" class="contact-link">↗ +1 (214) 223-9581</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2025 Fuad Aye</span>
+  <span>Dallas, TX · Built with care</span>
+</footer>
+
+<script>
+  // Fade-in on scroll
+  const faders = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  faders.forEach(el => observer.observe(el));
+
+  // Hero fade in on load
+  document.querySelector('#hero .fade-in').classList.add('visible');
+
+  // BUG GAME
+  let score = 0, lives = 3, timeLeft = 30, best = 0;
+  let gameInterval, timerInterval, bugInterval;
+  let running = false;
+  const bugs = ['🐛','🪲','🪳','🐜','🦗'];
+  const arena = document.getElementById('game-arena');
+  const scoreEl = document.getElementById('score-display');
+  const livesEl = document.getElementById('lives-display');
+  const timerEl = document.getElementById('timer-display');
+  const bestEl = document.getElementById('best-display');
+  const goEl = document.getElementById('game-over');
+  const placeholder = document.getElementById('game-placeholder');
+
+  function startGame() {
+    clearAllIntervals();
+    clearBugs();
+    score = 0; lives = 3; timeLeft = 30;
+    running = true;
+    goEl.style.display = 'none';
+    placeholder.style.display = 'none';
+    updateHUD();
+    document.getElementById('game-btn').textContent = 'Running…';
+    document.getElementById('game-btn').disabled = true;
+
+    timerInterval = setInterval(() => {
+      timeLeft--;
+      timerEl.textContent = timeLeft;
+      if (timeLeft <= 0) endGame(false);
+    }, 1000);
+
+    spawnBugLoop();
+  }
+
+  function spawnBugLoop() {
+    let delay = 900;
+    function spawn() {
+      if (!running) return;
+      spawnBug();
+      delay = Math.max(350, delay - 12);
+      bugInterval = setTimeout(spawn, delay);
+    }
+    spawn();
+  }
+
+  function spawnBug() {
+    const bug = document.createElement('div');
+    bug.className = 'bug';
+    bug.textContent = bugs[Math.floor(Math.random() * bugs.length)];
+    const arenaW = arena.offsetWidth - 50;
+    const arenaH = arena.offsetHeight - 50;
+    bug.style.left = Math.random() * arenaW + 'px';
+    bug.style.top = Math.random() * arenaH + 'px';
+    arena.appendChild(bug);
+
+    const lifespan = Math.max(1200, 2400 - (30 - timeLeft) * 40);
+    const timer = setTimeout(() => {
+      if (bug.parentNode && !bug.classList.contains('squashed')) {
+        bug.remove();
+        if (running) {
+          lives = Math.max(0, lives - 1);
+          updateHUD();
+          if (lives === 0) endGame(true);
+        }
+      }
+    }, lifespan);
+
+    bug.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (!running) return;
+      clearTimeout(timer);
+      bug.classList.add('squashed');
+      score++;
+      scoreEl.textContent = score;
+      setTimeout(() => bug.remove(), 200);
+    });
+  }
+
+  function endGame(bugsWin) {
+    running = false;
+    clearAllIntervals();
+    clearBugs();
+    if (score > best) { best = score; bestEl.textContent = best; }
+    document.getElementById('go-title').textContent = bugsWin ? 'Bugs Win 🐛' : 'Time\'s Up!';
+    document.getElementById('go-score').textContent = `You squashed ${score} bug${score !== 1 ? 's' : ''}.${score >= 15 ? ' Impressive!' : score >= 8 ? ' Not bad.' : ' Keep debugging!'}`;
+    goEl.style.display = 'flex';
+    document.getElementById('game-btn').textContent = 'Deploy Bugs';
+    document.getElementById('game-btn').disabled = false;
+  }
+
+  function clearBugs() {
+    document.querySelectorAll('.bug').forEach(b => b.remove());
+  }
+
+  function clearAllIntervals() {
+    clearInterval(timerInterval);
+    clearTimeout(bugInterval);
+  }
+
+  function updateHUD() {
+    scoreEl.textContent = score;
+    timerEl.textContent = timeLeft;
+    const hearts = ['', '❤️', '❤️❤️', '❤️❤️❤️'];
+    livesEl.textContent = hearts[lives] || '💀';
+  }
+</script>
+</body>
+</html>
